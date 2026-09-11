@@ -311,6 +311,84 @@ show_reading_time: false
 }
 .lc-net:hover { box-shadow: 0 6px 24px rgba(34,211,238,.2), inset 0 0 20px rgba(34,211,238,.08); color: #22d3ee; }
 
+/* ── PROJECT CARDS ── */
+.proj-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  margin-bottom: .5rem;
+}
+
+.proj-card {
+  display: flex;
+  flex-direction: column;
+  padding: 22px 22px 18px;
+  border-radius: 12px;
+  background: #0d1117;
+  border: 1px solid #21262d;
+  text-decoration: none;
+  transition: transform .2s, box-shadow .2s, border-color .2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.proj-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  opacity: 0;
+  transition: opacity .2s;
+}
+
+.proj-card:hover { transform: translateY(-4px); text-decoration: none; }
+.proj-card:hover::before { opacity: 1; }
+
+.pc-fopl::before    { background: linear-gradient(90deg, #4ade80, #22d3ee); }
+.pc-fopl:hover      { border-color: #4ade80; box-shadow: 0 8px 32px rgba(74,222,128,.18); }
+
+.pc-mood::before    { background: linear-gradient(90deg, #f97316, #f43f5e); }
+.pc-mood:hover      { border-color: #f97316; box-shadow: 0 8px 32px rgba(249,115,22,.18); }
+
+.proj-eyebrow {
+  font-family: monospace;
+  font-size: .7rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: #484f58;
+  margin-bottom: 6px;
+}
+
+.proj-name {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #e6edf3;
+  margin-bottom: 8px;
+}
+
+.proj-desc {
+  font-family: monospace;
+  font-size: .8rem;
+  color: #8b949e;
+  line-height: 1.6;
+  flex: 1;
+  margin-bottom: 14px;
+}
+
+.proj-link {
+  font-family: monospace;
+  font-size: .75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: gap .15s;
+}
+
+.pc-fopl .proj-link { color: #4ade80; }
+.pc-mood .proj-link { color: #f97316; }
+.proj-card:hover .proj-link { gap: 10px; }
+
 /* ── PROGRESS CARDS ── */
 .prog-grid {
   display: grid;
@@ -438,9 +516,30 @@ show_reading_time: false
   </a>
 </div>
 
-<!-- ═══════════════ CLASS PROGRESS ═══════════════ -->
+<!-- ═══════════════ PROJECTS ═══════════════ -->
 <div class="sec-header">
   <span class="sec-num">03</span>
+  <span class="sec-label">Projects</span>
+</div>
+
+<div class="proj-grid">
+  <a href="https://fopl.opencodingsociety.com/home" class="proj-card pc-fopl">
+    <span class="proj-eyebrow">// web app</span>
+    <span class="proj-name">FOPL</span>
+    <span class="proj-desc">Fantasy sports platform built with Open Coding Society — manage leagues, track stats, and compete with friends.</span>
+    <span class="proj-link">fopl.opencodingsociety.com ↗</span>
+  </a>
+  <a href="https://anpdss.github.io/ANPDSS-Pages/mood-meal1/" class="proj-card pc-mood">
+    <span class="proj-eyebrow">// ai · food</span>
+    <span class="proj-name">Mood Meal</span>
+    <span class="proj-desc">AI-powered meal recommender that suggests recipes based on your current mood — food meets machine learning.</span>
+    <span class="proj-link">mood-meal ↗</span>
+  </a>
+</div>
+
+<!-- ═══════════════ CLASS PROGRESS ═══════════════ -->
+<div class="sec-header">
+  <span class="sec-num">04</span>
   <span class="sec-label">Class Progress</span>
 </div>
 
