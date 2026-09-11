@@ -231,85 +231,6 @@ show_reading_time: false
   color: #4fc3f7;
 }
 
-/* ── LESSON CARDS ── */
-.lesson-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 12px;
-  margin-bottom: .5rem;
-}
-
-.lesson-card {
-  display: flex;
-  flex-direction: column;
-  padding: 16px;
-  border-radius: 10px;
-  font-family: 'JetBrains Mono', 'Fira Code', monospace;
-  text-decoration: none;
-  border: 1px solid transparent;
-  transition: transform .2s, box-shadow .2s;
-  position: relative;
-  overflow: hidden;
-}
-
-.lesson-card::after {
-  content: '→';
-  position: absolute;
-  bottom: 12px;
-  right: 14px;
-  font-size: .9rem;
-  opacity: 0;
-  transform: translateX(-6px);
-  transition: opacity .2s, transform .2s;
-}
-
-.lesson-card:hover { transform: translateY(-3px); text-decoration: none; }
-.lesson-card:hover::after { opacity: 1; transform: translateX(0); }
-
-.lc-tag {
-  font-size: .65rem;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  margin-bottom: 6px;
-  opacity: .7;
-}
-
-.lc-name {
-  font-size: .9rem;
-  font-weight: 700;
-}
-
-.lc-js {
-  background: linear-gradient(135deg, #1a2a1a, #0d1117);
-  border-color: #4ade80;
-  color: #4ade80;
-  box-shadow: inset 0 0 20px rgba(74,222,128,.05);
-}
-.lc-js:hover { box-shadow: 0 6px 24px rgba(74,222,128,.2), inset 0 0 20px rgba(74,222,128,.08); color: #4ade80; }
-
-.lc-var {
-  background: linear-gradient(135deg, #1a1a2e, #0d1117);
-  border-color: #818cf8;
-  color: #818cf8;
-  box-shadow: inset 0 0 20px rgba(129,140,248,.05);
-}
-.lc-var:hover { box-shadow: 0 6px 24px rgba(129,140,248,.2), inset 0 0 20px rgba(129,140,248,.08); color: #818cf8; }
-
-.lc-game {
-  background: linear-gradient(135deg, #2a1a0d, #0d1117);
-  border-color: #f97316;
-  color: #f97316;
-  box-shadow: inset 0 0 20px rgba(249,115,22,.05);
-}
-.lc-game:hover { box-shadow: 0 6px 24px rgba(249,115,22,.2), inset 0 0 20px rgba(249,115,22,.08); color: #f97316; }
-
-.lc-net {
-  background: linear-gradient(135deg, #0d1a2a, #0d1117);
-  border-color: #22d3ee;
-  color: #22d3ee;
-  box-shadow: inset 0 0 20px rgba(34,211,238,.05);
-}
-.lc-net:hover { box-shadow: 0 6px 24px rgba(34,211,238,.2), inset 0 0 20px rgba(34,211,238,.08); color: #22d3ee; }
 
 /* ── PROJECT CARDS ── */
 .proj-grid {
@@ -491,34 +412,9 @@ show_reading_time: false
   </a>
 </div>
 
-<!-- ═══════════════ LESSONS ═══════════════ -->
-<div class="sec-header">
-  <span class="sec-num">02</span>
-  <span class="sec-label">My Lessons</span>
-</div>
-
-<div class="lesson-grid">
-  <a href="{{site.baseurl}}/code/javascript" class="lesson-card lc-js">
-    <span class="lc-tag">lang</span>
-    <span class="lc-name">JS Basics</span>
-  </a>
-  <a href="{{site.baseurl}}/game/essentials/variables" class="lesson-card lc-var">
-    <span class="lc-tag">lang</span>
-    <span class="lc-name">JS Variables</span>
-  </a>
-  <a href="{{site.baseurl}}/gamerunner" class="lesson-card lc-game">
-    <span class="lc-tag">project</span>
-    <span class="lc-name">Gamerunner</span>
-  </a>
-  <a href="{{site.baseurl}}/network/stack" class="lesson-card lc-net">
-    <span class="lc-tag">systems</span>
-    <span class="lc-name">Networking</span>
-  </a>
-</div>
-
 <!-- ═══════════════ PROJECTS ═══════════════ -->
 <div class="sec-header">
-  <span class="sec-num">03</span>
+  <span class="sec-num">02</span>
   <span class="sec-label">Projects</span>
 </div>
 
@@ -539,7 +435,7 @@ show_reading_time: false
 
 <!-- ═══════════════ CLASS PROGRESS ═══════════════ -->
 <div class="sec-header">
-  <span class="sec-num">04</span>
+  <span class="sec-num">03</span>
   <span class="sec-label">Class Progress</span>
 </div>
 
